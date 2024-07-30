@@ -5,6 +5,9 @@ on:
     branches:
       - main  # 배포를 트리거할 브랜치 지정. 일반적으로 'main'이나 'master' 브랜치를 사용합니다.
 
+env:
+  NEXT_PUBLIC_API_BASE_URL: ${{ secrets.TestURL }}
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
